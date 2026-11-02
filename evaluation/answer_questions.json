@@ -1,0 +1,27 @@
+[
+    {
+        "id": "q001",
+        "question": "What is ETL?",
+        "expected_answer": "ETL stands for Extract, Transform, Load. Data is extracted, transformed, and then loaded into a destination."
+    },
+    {
+        "id": "q002",
+        "question": "How should you monitor a data pipeline?",
+        "expected_answer": "Pipelines should be monitored for failures, changing data, missing data, shifting data types, and Package deprecation or functionality change."
+    },
+    {
+        "id": "q003",
+        "question": "What are some examples of unstructured data?",
+        "expected_answer": "Unstructured data includes text, audio, images, video, spatial and IoT."
+    },
+    {
+    "id": "q004",
+    "question": "Give me an example of how to implement class inheritance?",
+    "expected_answer": "Class inheritance allows a child class to reuse methods and attributes from a parent class. For example:\n\nclass BankAccount:\n    def __init__(self, balance):\n        self.balance = balance\n\n    def withdraw(self, amount):\n        self.balance -= amount\n\nclass SavingsAccount(BankAccount):\n    pass\n\nSavingsAccount inherits the attributes and methods of BankAccount."
+    },
+    {
+    "id": "q005",
+    "question": "What is exception handling with an example?",
+    "expected_answer": "Exception handling allows a program to catch and handle errors without immediately crashing. For example:\n\ntry:\n    print(5 + 'a')\nexcept TypeError:\n    print('Cannot add an integer and a string.')\nfinally:\n    print('This block always executes.')\n\nThe try block contains code that might raise an exception, except handles the TypeError, and finally executes regardless of whether an exception occurs."
+    }
+]
