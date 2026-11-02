@@ -1,0 +1,27 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local document data
+data/
+
+# MLflow artifacts and databases
+mlartifacts/
+mlruns/
+mlflow.db
+*.db
+
+# Intermediate outputs
+vision_output.json
+
+# Editor and operating system
+.vscode/
+.DS_Store
