@@ -1,0 +1,181 @@
+[
+  {
+    "id": "q001",
+    "type": "specific",
+    "question": "What is ETL?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/ETL and ELT in Python.pdf",
+        "page_number": 1
+      }
+    ],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q002",
+    "type": "specific",
+    "question": "What is modularity in ETL/ELT?",
+    "relevant_pages": [
+        {
+        "relative_path": "General_Python/ETL and ELT in Python.pdf",
+        "page_number": 3
+      }
+    ],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q003",
+    "type": "specific",
+    "question": "What does self mean in Object-Oriented Programming?",
+    "relevant_pages": [
+        {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 1
+      }
+    ],
+    "relevant_documents": [
+        "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q004",
+    "type": "specific",
+    "question": "What does __eq__ mean/do?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 4
+      },
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 5
+      }
+    ],
+    "relevant_documents": [
+        "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q005",
+    "type": "image",
+    "question": "What are different class methods and attributes in OOP?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 1
+      },
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 9
+      }
+    ],
+    "relevant_documents": [
+        "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q006",
+    "type": "image",
+    "question": "How do you add an attribute to a class in Python?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 1
+      },
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 2
+      }
+    ],
+    "relevant_documents": [
+        "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q007",
+    "type": "image",
+    "question": "What is an example of running SQL queries in Python?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/ETL and ELT in Python.pdf",
+        "page_number": 2
+      }
+    ],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q008",
+    "type": "image",
+    "question": "What other types of file outputs can you use instead of CSV?",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/ETL and ELT in Python.pdf",
+        "page_number": 5
+      }
+    ],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q009",
+    "type": "image",
+    "question": "Give me the code to implement class inheritance.",
+    "relevant_pages": [
+      {
+        "relative_path": "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf",
+        "page_number": 4
+      }
+    ],
+    "relevant_documents": [
+        "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q010",
+    "type": "broad",
+    "question": "What topics are covered in my ETL and ELT course notes?",
+    "relevant_pages": [],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q011",
+    "type": "document_lookup",
+    "question": "Does my ETL and ELT course have any python examples?",
+    "relevant_pages": [],
+    "relevant_documents": [
+      "General_Python/ETL and ELT in Python.pdf"
+    ]
+  },
+  {
+    "id": "q012",
+    "type": "document_lookup",
+    "question": "Does my Object-Oriented Programming course notes have any code examples in Java?",
+    "relevant_pages": [],
+    "relevant_documents": [
+      "General_Python/Introduction to Object-Oriented Programming (OOP) in Python.pdf"
+    ]
+  },
+  {
+    "id": "q013",
+    "type": "unanswerable",
+    "question": "How does programming in R differ from Python?",
+    "relevant_pages": [],
+    "relevant_documents": []
+  },
+  {
+    "id": "q014",
+    "type": "unanswerable",
+    "question": "What does supervised learning mean?",
+    "relevant_pages": [],
+    "relevant_documents": []
+  }
+]
