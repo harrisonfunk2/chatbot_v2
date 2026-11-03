@@ -1,0 +1,31 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Local Python environment
+.venv/
+venv/
+.python/
+__pycache__/
+*.pyc
+
+# Document data
+data/
+vision_output.json
+
+# MLflow files
+mlartifacts/
+mlruns/
+mlflow.db
+
+# Development files
+.vscode/
+.git/
+.gitignore
+.DS_Store
+
+# Not needed by deployed API
+ingestion/
+evaluation/
+```
