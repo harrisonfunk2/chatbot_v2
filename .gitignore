@@ -1,27 +1,30 @@
 
-# Secrets
+# API keys and environment variables
 .env
 .env.*
 !.env.example
 
-# Python
-__pycache__/
-*.py[cod]
+# Python environments and caches
 .venv/
 venv/
+__pycache__/
+*.py[cod]
+.python/
 
 # Local document data
 data/
-
-# MLflow artifacts and databases
-mlartifacts/
-mlruns/
-mlflow.db
-*.db
-
-# Intermediate outputs
 vision_output.json
 
-# Editor and operating system
+# MLflow local tracking
+mlflow.db
+mlruns/
+mlartifacts/
+
+# Local editor and OS files
 .vscode/
 .DS_Store
+
+# Testing and temporary files
+.pytest_cache/
+.mypy_cache/
+*.log
