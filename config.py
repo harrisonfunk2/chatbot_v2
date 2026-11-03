@@ -10,6 +10,7 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 
 PINECONE_INDEX_NAME = "rag-chatbot-v2"
 PINECONE_NAMESPACE = "development"
+PINECONE_SUMMARY_NAMESPACE = "development-summaries"
 
 MERGED_DATA_PATH = "data/processed/merged_documents.json"
 
