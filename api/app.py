@@ -1,9 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 from contextlib import asynccontextmanager
 
 from retrieval.recursive_retrieval import create_recursive_retriever
+from generation.generation import answer_question
 
 
 # lifespan function runs when the server starts and shuts down
@@ -17,7 +18,7 @@ async def lifespan(app: FastAPI):
     yield
 
     app.state.retriever = None
-    
+
 
 app = FastAPI(title="Chatbot",
               lifespan=lifespan)
@@ -27,9 +28,25 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
-    citation: dict[int, str]
+    citations: dict[int, str]
 
 
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.post("/chat", response_model=ChatResponse)
+def chat(request: ChatRequest):
+
+    retriever = app.state.retriever
+
+    output = answer_question(
+        request.question,
+        retriever
+    )
+
+    return ChatResponse(
+        answer=output["answer"],
+        citations=output["citation_map"]
+    )
