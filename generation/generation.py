@@ -5,13 +5,25 @@ from openai import OpenAI
 import mlflow
 from mlflow.openai import autolog
 from mlflow.entities import Document
-
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_experiment("rag-chatbot-generation")
-
-autolog()
+import mlflow.tracing 
+import os
 
 client = OpenAI()
+
+def configure_mlflow():
+    if os.getenv("ENABLE_MLFLOW", "false").lower() != "true":
+        mlflow.tracing.disable()
+        return
+
+    mlflow.set_tracking_uri(
+        os.getenv(
+            "MLFLOW_TRACKING_URI",
+            "http://127.0.0.1:5000"
+        )
+    )
+
+    mlflow.set_experiment("rag-chatbot-generation")
+    autolog()
 
 
 def format_context(results):
