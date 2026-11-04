@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAG Study Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>RAG Chatbot</h1>
+            <p>
+                Ask questions about my notes using
+                retrieval-augmented generation.
+            </p>
+        </header>
+
+        <section class="examples">
+            <p>Try an example:</p>
+            <button class="example" data-question="What is ETL?">
+                What is ETL?
+            </button>
+            <button class="example" data-question="Explain Python inheritance.">
+                Explain Python inheritance
+            </button>
+        </section>
+
+        <section id="messages" class="messages" aria-live="polite">
+            <div class="message assistant">
+                Hello! Ask me a question about the indexed notes.
+            </div>
+        </section>
+
+        <form id="chat-form">
+            <input
+                id="question"
+                type="text"
+                placeholder="Ask a question..."
+                maxlength="500"
+                required
+            >
+            <button id="send-button" type="submit">Send</button>
+        </form>
+
+        <p id="status" role="status"></p>
+
+        <footer>
+            Built with OpenAI, LlamaIndex, Pinecone, FastAPI, 
+            and Google Cloud Run
+        </footer>
+    </main>
+</body>
+</html>
