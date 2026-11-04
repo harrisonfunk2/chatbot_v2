@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from contextlib import asynccontextmanager
@@ -25,6 +26,16 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Chatbot",
               lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://harrisonfunk2.github.io"
+    ],
+    allow_credentials=False,
+    allow_methods=["POST"],
+    allow_headers=["Content-Type"],
+)
 
 class ChatRequest(BaseModel):
     question: str = Field(min_length=1, max_length=500)
