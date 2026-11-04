@@ -71,6 +71,7 @@ def generate_answer(question, context):
             f"Question:\n{question}\n\n"
             f"Retrieved sources:\n{context}"
         ),
+        max_output_tokens=750
     )
 
     return response.output_text
