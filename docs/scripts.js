@@ -1,6 +1,6 @@
-// Replace with your actual Cloud Run service URL.
-// Do not include /chat at the end.
-const API_URL = "https://YOUR-CLOUD-RUN-SERVICE-URL";
+// Cloud Run service URL
+// Used to connect
+const API_URL = "https://chatbot-v2-10011149197.us-west1.run.app";
 
 const form = document.getElementById("chat-form");
 const input = document.getElementById("question");
