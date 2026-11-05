@@ -64,7 +64,7 @@ def merge_document_content(raw_pages, vision_docs):
 
 
 def main():
-    path_to_data = "data"
+    path_to_data = "data/documents"
 
     raw_pages = extract_raw_text(path_to_data)
 
