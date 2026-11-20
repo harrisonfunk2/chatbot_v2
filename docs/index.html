@@ -1,57 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RAG Chatbot</title>
+    <title>AI Knowledge Base Assistant</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 
 <body>
-    <main class="container">
-        <header>
-            <h1>RAG Chatbot</h1>
-            <p>
-                Ask questions about my notes using
-                retrieval-augmented generation.
-            </p>
+    <div class="app">
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-icon">◇</span>
+                <span>Knowledge Base</span>
+            </div>
+
+            <span class="header-label">AI powered document search</span>
         </header>
 
-        <section class="examples">
-            <p>Try an example:</p>
-            <button class="example" data-question="What is ETL?">
-                What is ETL?
-            </button>
-            <button class="example" data-question="Explain Python inheritance.">
-                Explain Python inheritance
-            </button>
-        </section>
+        <main class="chat-layout">
+            <section id="welcome" class="welcome">
+                <h1>AI Knowledge Base Assistant</h1>
+                <p>
+                    Explore technical documents with AI powered
+                    search and source-grounded answers.
+                </p>
 
-        <section id="messages" class="messages" aria-live="polite">
-            <div class="message assistant">
-                Hello! Ask me a question about the indexed notes.
-            </div>
-        </section>
+                <div class="examples">
+                    <p class="section-label">TRY ASKING</p>
 
-        <form id="chat-form">
-            <input
-                id="question"
-                type="text"
-                placeholder="Ask a question..."
-                maxlength="500"
-                required
+                    <button
+                        class="example"
+                        data-question="What are vector embeddings?"
+                    >
+                        <span>What are vector embeddings?</span>
+                        <span aria-hidden="true">↗</span>
+                    </button>
+
+                    <button
+                        class="example"
+                        data-question="How does MLflow track experiments?"
+                    >
+                        <span>How does MLflow track experiments?</span>
+                        <span aria-hidden="true">↗</span>
+                    </button>
+
+                    <button
+                        class="example"
+                        data-question="What is the difference between ETL and ELT?"
+                    >
+                        <span>What is the difference between ETL and ELT?</span>
+                        <span aria-hidden="true">↗</span>
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="messages"
+                class="messages"
+                aria-live="polite"
+                aria-label="Conversation"
+            ></section>
+        </main>
+
+        <div class="composer-area">
+            <form id="chat-form" class="chat-form">
+                <input
+                    id="question"
+                    type="text"
+                    placeholder="Ask a question about the documents..."
+                    maxlength="500"
+                    autocomplete="off"
+                    aria-label="Your question"
+                    required
+                >
+
+                <button
+                    id="send-button"
+                    type="submit"
+                    aria-label="Send message"
+                >
+                    ↑
+                </button>
+            </form>
+
+            <p id="status" role="status"></p>
+
+            <p class="input-note">
+                Answers are generated from indexed documents.
+                Please verify important information.
+            </p>
+        </div>
+
+        <footer class="site-footer">
+            <p>
+                Built with OpenAI, LlamaIndex, Pinecone,
+                FastAPI, and Google Cloud Run.
+            </p>
+
+            <a
+                href="https://github.com/harrisonfunk2/chatbot_v2"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-            <button id="send-button" type="submit">Send</button>
-        </form>
-
-        <p id="status" role="status"></p>
-
-        <footer>
-            Built with OpenAI, LlamaIndex, Pinecone, FastAPI, 
-            and Google Cloud Run
+                GitHub ↗
+            </a>
         </footer>
-    </main>
+    </div>
 </body>
 </html>
