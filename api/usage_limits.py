@@ -4,8 +4,8 @@ from functools import lru_cache
 from google.cloud import firestore
 
 
-DAILY_LIMIT = 15
-HOURLY_LIMIT = 5
+DAILY_LIMIT = 30
+HOURLY_LIMIT = 10
 
 
 @lru_cache(maxsize=1)
